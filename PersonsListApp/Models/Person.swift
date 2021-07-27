@@ -21,10 +21,6 @@ struct Person {
         init() {
             setup()
         }
-                var names = [Person]()
-                var surnames = [Person]()
-                var phones = [Person]()
-                var emails = [Person]()
         
         func setup() {
             let names = ["Alexander", "Oliver", "Vasiya", "Gena", "Jack"]
