@@ -11,11 +11,7 @@ class PersonsListViewController: UITableViewController {
     
     // MARK: - Private properties
     
-    private var person = Person.DataManager()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    private var person = DataManager()
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,4 +38,17 @@ class PersonsListViewController: UITableViewController {
         detailVC.person = person
     }
 
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let tabBarController = segue.destination as? UITabBarController else {return}
+//        guard let viewControllers = tabBarController.viewControllers else {return}
+//
+//        viewControllers.forEach {
+//            if let detailVC = $0 as? DetailViewController {
+//                detailVC.person = person
+//            } else if let navigationVC = $0 as? UINavigationController {
+//                let contactVC = navigationVC.topViewController as! ContactsViewController
+//                contacVC.person = person
+//            }
+//            }
+//        }
 }

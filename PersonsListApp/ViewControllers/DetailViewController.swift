@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
     @IBOutlet weak var EmailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     
@@ -20,6 +20,6 @@ class DetailViewController: UIViewController {
         EmailLabel.text = person.email
         phoneLabel.text = String(person.phone)
     }
-
+    
     
 }
