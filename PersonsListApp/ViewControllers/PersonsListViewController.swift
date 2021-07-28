@@ -9,6 +9,8 @@ import UIKit
 
 class PersonsListViewController: UITableViewController {
     
+    // MARK: - Private properties
+    
     private var person = Person.DataManager()
 
     override func viewDidLoad() {
@@ -16,7 +18,6 @@ class PersonsListViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return person.persons.count
@@ -33,16 +34,12 @@ class PersonsListViewController: UITableViewController {
         return cell
     }
     
-
-
-
- 
-
-
     // MARK: - Navigation
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        guard let detailVC = segue.destination as? DetailViewController else { return }
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        let person = person.persons[indexPath.row]
+        detailVC.person = person
     }
 
 }
