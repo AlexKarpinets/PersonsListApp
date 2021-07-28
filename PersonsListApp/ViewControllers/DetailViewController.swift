@@ -20,6 +20,4 @@ class DetailViewController: UIViewController {
         EmailLabel.text = person.email
         phoneLabel.text = String(person.phone)
     }
-    
-    
 }
