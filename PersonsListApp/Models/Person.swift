@@ -19,14 +19,14 @@ struct Person {
         var persons = [Person]()
         
         init() {
-            setup()
+            setRandomPerson()
         }
         
-        func setup() {
+        func setRandomPerson() {
             let names = ["Alexander", "Oliver", "Vasiya", "Gena", "Jack"]
             let surnames = ["Popov", "Ivanov", "Petrov", "Sidorov", "Bregnev"]
             let phones = [12345, 42341, 56402, 63810, 35015]
-            let emails = ["ag@mail.ru", "pop@gmail.com", "petr@bk.ru", "super@rambler.ru, gena@yandex.ru"]
+            let emails = ["ag@mail.ru", "pop@gmail.com", "petr@bk.ru", "super@rambler.ru", "gena@yandex.ru"]
             
             for _ in 0..<5 {
                 let name = Int.random(in: 0..<names.count)
