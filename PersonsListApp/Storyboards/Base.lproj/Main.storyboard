@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DCF-PN-Cpz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4r8-vt-ZQ2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -34,12 +34,13 @@
                             <outlet property="delegate" destination="hbo-fd-mrW" id="rMw-dO-HQs"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="LlZ-4V-p7q"/>
                     <navigationItem key="navigationItem" title="Persons List" id="qta-b9-orE"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Znc-Mu-9xd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3345" y="23"/>
+            <point key="canvasLocation" x="2816" y="35"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="B5t-hQ-roJ">
@@ -101,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zLy-68-pKv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4203" y="23"/>
+            <point key="canvasLocation" x="3817" y="23"/>
         </scene>
         <!--Persons List-->
         <scene sceneID="G94-iU-5sp">
@@ -126,69 +127,48 @@
                             <outlet property="delegate" destination="KiC-wR-eOL" id="bp6-gy-Cq4"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="YMA-ay-Tq3"/>
                     <navigationItem key="navigationItem" title="Persons List" id="B7G-rh-7R1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSa-Wr-7J4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3345" y="757"/>
+            <point key="canvasLocation" x="2335" y="735"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="FYv-eP-pTu">
+            <objects>
+                <navigationController id="4r8-vt-ZQ2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vjr-Sh-4Of">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DCF-PN-Cpz" kind="relationship" relationship="rootViewController" id="byV-oe-32V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ijl-OH-JBr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="843" y="23"/>
+        </scene>
+        <!--Persons List-->
         <scene sceneID="lnD-y4-iCK">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="DCF-PN-Cpz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="yfi-cJ-vXy"/>
+                    <navigationItem key="navigationItem" title="Persons List" id="yfi-cJ-vXy"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r08-e7-z4Z">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="b2j-ja-qx3" kind="relationship" relationship="viewControllers" id="O7O-1t-3ko"/>
-                        <segue destination="77o-mb-YP9" kind="relationship" relationship="viewControllers" id="5TE-06-q39"/>
+                        <segue destination="hbo-fd-mrW" kind="relationship" relationship="viewControllers" id="oiV-Gc-WVN"/>
+                        <segue destination="KiC-wR-eOL" kind="relationship" relationship="viewControllers" id="WZc-hH-b7k"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lb9-a9-dPC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1689.8550724637682" y="22.767857142857142"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="vdH-x7-IfZ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="77o-mb-YP9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="QVS-jb-dVI"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="oDK-dv-Ze5">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="KiC-wR-eOL" kind="relationship" relationship="rootViewController" id="x1Z-ha-TYX"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nrD-UY-ptC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2500" y="757"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="oXr-Hn-TH5">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b2j-ja-qx3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="dGn-p8-mZp"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="O4S-co-b6d">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="hbo-fd-mrW" kind="relationship" relationship="rootViewController" id="zh3-SA-HVO"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7c-rI-k1Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2501" y="23"/>
         </scene>
     </scenes>
     <resources>

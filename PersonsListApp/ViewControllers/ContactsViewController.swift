@@ -10,22 +10,22 @@ import UIKit
 class ContactsViewController: UITableViewController {
     
     // MARK: - Public properties
-    var person = DataManager() // недопонимаю какое свойство тут объявлять
+    var person = Person.setRandomPersons()
     
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return person.persons.count
+        person.count
     }
     
     override func tableView(_ tableView: UITableView,
                             titleForHeaderInSection section: Int) -> String? {
-        "Full Name" // понимаю что сюда нужно FullName из DataManager поместить, но как к нему обратиться???
+        person[section].fullName
     }
     
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
-        return DataManager.shared.persons.count
+    2
     }
     
     
@@ -33,7 +33,7 @@ class ContactsViewController: UITableViewController {
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath)
         
-        let person = person.persons[indexPath.row]
+        let person = person[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
         content.text = person.fullName
